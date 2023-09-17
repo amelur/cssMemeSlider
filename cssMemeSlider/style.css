@@ -127,21 +127,29 @@ html {
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .wrapper {
-  background: rgb(54, 49, 49);
+  background: rgb(70 52 84);
   margin: 0 auto;
   max-width: 1000rem;
+  height: 100vh;
   padding: 30rem;
 }
 
+.title {
+  padding: 0 0 20rem;
+  text-align: center;
+  font-size: 40rem;
+  color: white;
+}
 .slider {
   display: flex;
   flex-direction: column;
-  row-gap: 20rem;
+  row-gap: 30rem;
 
   overflow: hidden;
 }
@@ -162,7 +170,8 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 30rem;
+  border: 2px solid white;
+  border-radius: 20rem;
 }
 
 .slide.s1 {
@@ -181,6 +190,8 @@ html {
 .nav-btns {
   display: flex;
   padding-right: 10rem;
+  border: 2px solid white;
+  border-radius: 20rem;
 }
 
 .btn {
@@ -214,22 +225,22 @@ label:hover {
 }
 
 #btn1:checked ~ .nav .nav-btns .btn.btn1 {
-  background: rgb(23, 23, 128);
+  background: rgb(22 206 91);
   border: 3rem solid white;
 }
 
 #btn2:checked ~ .nav .nav-btns .btn.btn2 {
-  background: rgb(23, 23, 128);
+  background: rgb(22 206 91);
   border: 3rem solid white;
 }
 
 #btn3:checked ~ .nav .nav-btns .btn.btn3 {
-  background: rgb(23, 23, 128);
+  background: rgb(22 206 91);
   border: 3rem solid white;
 }
 
 #btn4:checked ~ .nav .nav-btns .btn.btn4 {
-  background: rgb(23, 23, 128);
+  background: rgb(22 206 91);
   border: 3rem solid white;
 }
 
@@ -253,13 +264,15 @@ label:hover {
 }
 
 .nav__text {
-  width: min-content;
+  width: 50%;
   font-size: 20rem;
   color: white;
   display: inline-flex;
   overflow: hidden;
   transition: transform 0.5s ease;
   padding: 5rem 0 5rem 10rem;
+  border: 2px solid white;
+  border-radius: 20rem;
 }
 
 .text {
@@ -286,6 +299,9 @@ label:hover {
 }
 
 @media (max-width: 768px) {
+  title {
+    font-size: 35rem;
+  }
   .slides {
     height: 350rem;
   }
@@ -299,12 +315,16 @@ label:hover {
   }
 
   .nav__text {
+    width: 100%;
     align-self: flex-start;
     font-size: 18rem;
   }
 }
 
 @media (max-width: 500px) {
+  title {
+    font-size: 30rem;
+  }
   .slides {
     height: 300rem;
     height: 227rem;
