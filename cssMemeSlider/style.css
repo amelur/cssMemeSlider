@@ -170,7 +170,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border: 2px solid white;
+  border: 2rem solid white;
   border-radius: 20rem;
 }
 
@@ -190,14 +190,14 @@ html {
 .nav-btns {
   display: flex;
   padding-right: 10rem;
-  border: 2px solid white;
+  border: 2rem solid white;
   border-radius: 20rem;
 }
 
 .btn {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 15rem;
+  height: 15rem;
   border: 3rem solid white;
   border-radius: 50%;
   cursor: pointer;
@@ -271,7 +271,7 @@ label:hover {
   overflow: hidden;
   transition: transform 0.5s ease;
   padding: 5rem 0 5rem 10rem;
-  border: 2px solid white;
+  border: 2rem solid white;
   border-radius: 20rem;
 }
 
