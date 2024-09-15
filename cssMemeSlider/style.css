@@ -1,0 +1,338 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 0.06rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(70, 52, 84);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000rem;
+  height: 100vh;
+  padding: 30rem;
+}
+
+.title {
+  padding: 0 0 20rem;
+  text-align: center;
+  font-size: 40rem;
+  color: white;
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30rem;
+
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 500rem;
+}
+
+.slide {
+  flex: 0 0 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: 2rem solid white;
+  border-radius: 20rem;
+}
+
+.slide.s1 {
+  background-image: url(slides/1.png);
+}
+.slide.s2 {
+  background-image: url(slides/2.png);
+}
+.slide.s3 {
+  background-image: url(slides/3.png);
+}
+.slide.s4 {
+  background-image: url(slides/4.png);
+}
+
+.nav-btns {
+  display: flex;
+  padding-right: 10rem;
+  border: 2rem solid white;
+  border-radius: 20rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 15rem;
+  height: 15rem;
+  border: 3rem solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8rem;
+  transition: all 0.3s ease;
+}
+
+label:hover > .btn {
+  background: white;
+}
+
+label:hover {
+  filter: brightness(180%);
+}
+
+#btn1:checked ~ .nav .nav-btns .btn.btn1 {
+  background: rgb(22 206 91);
+  border: 3rem solid white;
+}
+
+#btn2:checked ~ .nav .nav-btns .btn.btn2 {
+  background: rgb(22 206 91);
+  border: 3rem solid white;
+}
+
+#btn3:checked ~ .nav .nav-btns .btn.btn3 {
+  background: rgb(22 206 91);
+  border: 3rem solid white;
+}
+
+#btn4:checked ~ .nav .nav-btns .btn.btn4 {
+  background: rgb(22 206 91);
+  border: 3rem solid white;
+}
+
+#btn1:checked ~ .slides .slide {
+  transition: all 1s ease;
+}
+
+#btn2:checked ~ .slides .slide {
+  transition: all 1s ease;
+  transform: translateX(-100%);
+}
+
+#btn3:checked ~ .slides .slide {
+  transform: translateX(-200%);
+  transition: all 1s ease;
+}
+
+#btn4:checked ~ .slides .slide {
+  transition: all 1s ease;
+  transform: translateX(-300%);
+}
+
+.nav__text {
+  width: 50%;
+  font-size: 20rem;
+  color: white;
+  display: inline-flex;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  padding: 5rem 0 5rem 10rem;
+  border: 2rem solid white;
+  border-radius: 20rem;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  flex: 0 0 100%;
+}
+
+#btn1:checked ~ .nav .nav__text .text {
+  transition: all 1s ease;
+}
+
+#btn2:checked ~ .nav .nav__text .text {
+  transition: all 1s ease;
+  transform: translateX(-100%);
+}
+
+#btn3:checked ~ .nav .nav__text .text {
+  transition: all 1s ease;
+  transform: translateX(-200%);
+}
+
+#btn4:checked ~ .nav .nav__text .text {
+  transition: all 1s ease;
+  transform: translateX(-300%);
+}
+
+@media (max-width: 768px) {
+  title {
+    font-size: 35rem;
+  }
+  .slides {
+    height: 350rem;
+  }
+  .nav {
+    flex-direction: column;
+    row-gap: 20rem;
+  }
+  .nav-btns {
+    order: -1;
+    align-self: center;
+  }
+
+  .nav__text {
+    width: 100%;
+    align-self: flex-start;
+    font-size: 18rem;
+  }
+}
+
+@media (max-width: 500px) {
+  title {
+    font-size: 30rem;
+  }
+  .slides {
+    height: 300rem;
+    height: 227rem;
+    font-size: 15rem;
+  }
+}
