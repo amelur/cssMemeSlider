@@ -132,8 +132,11 @@ html {
   padding: 0;
 }
 
+body {
+  background: rgb(70, 52, 84);
+}
+
 .wrapper {
-  background: rgb(70 52 84);
   margin: 0 auto;
   max-width: 1000rem;
   height: 100vh;
@@ -168,7 +171,7 @@ html {
 .slide {
   flex: 0 0 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border: 2rem solid white;
   border-radius: 20rem;
@@ -276,6 +279,8 @@ label:hover {
 }
 
 .text {
+  display: flex;
+  align-items: center;
   flex: 0 0 100%;
 }
 
